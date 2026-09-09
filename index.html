@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TV Kviis — laadi alla</title>
+<title>LuVu game — laadi alla</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
@@ -17,6 +17,9 @@
     --text-muted: #9c9c96;
     --border: #2a2d3a;
     --radius: 14px;
+    --red: #e2453c;
+    --blue: #3d7fe2;
+    --green: #3ddc84;
   }
 
   * { box-sizing: border-box; }
@@ -24,7 +27,7 @@
   html, body {
     margin: 0;
     padding: 0;
-    background: var(--bg);
+    background: radial-gradient(circle at 50% 0%, #1c2030 0%, #101219 65%);
     color: var(--text);
     font-family: 'Inter', system-ui, sans-serif;
     -webkit-font-smoothing: antialiased;
@@ -44,17 +47,44 @@
   }
 
   .eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 10px;
     font-size: 15px;
     color: var(--amber);
     font-weight: 500;
-    margin: 0 0 12px;
+    margin: 0 0 18px;
   }
+
+  .eyebrow img {
+    height: 32px;
+    width: 32px;
+    border-radius: 8px;
+  }
+
+  .dots {
+    display: flex;
+    gap: 8px;
+    margin: 0 0 16px;
+  }
+
+  .dots span {
+    width: 12px;
+    height: 12px;
+    border-radius: 4px;
+    display: inline-block;
+  }
+
+  .dots span:nth-child(1) { background: var(--red); }
+  .dots span:nth-child(2) { background: var(--blue); }
+  .dots span:nth-child(3) { background: var(--amber); }
+  .dots span:nth-child(4) { background: var(--green); }
 
   h1 {
     font-family: 'Space Grotesk', sans-serif;
     font-weight: 700;
-    font-size: clamp(40px, 9vw, 64px);
-    line-height: 1.05;
+    font-size: clamp(36px, 8.5vw, 58px);
+    line-height: 1.08;
     letter-spacing: -0.01em;
     margin: 0 0 18px;
   }
@@ -194,10 +224,11 @@
 </head>
 <body>
 <main>
-  <p class="eyebrow">TV Kviis</p>
-  <h1>Mälumäng, mis mahub kogu tuppa</h1>
+  <p class="eyebrow"><img src="data:image/png;base64,LOGOB64" alt="">LuVu game</p>
+  <div class="dots"><span></span><span></span><span></span><span></span></div>
+  <h1>Võistle sõprade ja perega — otse kodudiivanilt</h1>
   <p class="lede">
-    Küsimused suurel ekraanil, vastused mängijate enda telefonis.
+    Küsimused suurel ekraanil, vastused igäühe enda telefonis.
     Rakendus paigaldub otse Google TV-sse.
   </p>
 
@@ -213,10 +244,10 @@
     <li><p>Paigalda Google TV-sse rakendus <code>Downloader</code> (leiad selle Google Play poest).</p></li>
     <li><p>Ava Downloader ja sisesta aadress <code>quiz.lu.vu</code>.</p></li>
     <li><p>Vajuta "Laadi alla" ja seejärel "Installi", kui allalaadimine on valmis.</p></li>
-    <li><p>Ava rakendus "TV Kviis" — see ilmub avakuva rakenduste ritta.</p></li>
+    <li><p>Ava rakendus "LuVu game" — see ilmub avakuva rakenduste ritta.</p></li>
   </ol>
 
-  <footer>TV Kviis · quiz.lu.vu</footer>
+  <footer>LuVu game · quiz.lu.vu</footer>
 </main>
 </body>
 </html>
